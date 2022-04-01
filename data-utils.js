@@ -22,3 +22,20 @@ export function purchaseFrequency() {
     return countMap;
 
 }
+
+export function coolFactor() {
+
+    const countMap = {};
+
+    for (let customer of customers) {
+        const coolness = customer.cool_factor;
+
+        if (countMap[coolness]) {
+            countMap[coolness]++;
+
+        } else {
+            countMap[coolness] = 1;
+        }
+    }
+    return countMap;
+}
