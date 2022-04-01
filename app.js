@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { purchaseFrequency, coolFactor } from './data-utils.js';
+import { purchaseFrequency, coolFactor, customerGender } from './data-utils.js';
 // let state
 
 // set event listeners 
@@ -47,12 +47,12 @@ const values2 = Object.values(cool);
 
 
 const data2 = {
-    labels: labels,
+    labels: labels2,
     datasets: [{
-        label: 'Customer Cool Factor',
+        label: 'Customer Cool Factor, 1-10',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
-        data: values,
+        data: values2,
     }]
 };
 
@@ -67,3 +67,36 @@ const myChart2 = new Chart(
     document.getElementById('myChart2'),
     config2
 );
+
+
+
+
+const gender = customerGender();
+
+const labels3 = Object.keys(gender);
+
+const values3 = Object.values(gender);
+
+
+const data3 = {
+    labels: labels3,
+    datasets: [{
+        label: 'Customer Gender',
+        backgroundColor: ['violet', 'yellowgreen', 'yellow', 'tomato', 'turquoise', 'slateblue', 'purple', 'peru'],
+        borderColor: ['violet', 'yellowgreen', 'yellow', 'tomato', 'turquoise', 'slateblue', 'purple', 'peru'],
+        data: values3,
+    }]
+};
+
+const config3 = {
+    type: 'pie',
+    data: data3,
+    options: {}
+};
+
+// eslint-disable-next-line
+const myChart3 = new Chart(
+    document.getElementById('myChart3'),
+    config3
+);
+

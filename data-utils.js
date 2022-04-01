@@ -39,3 +39,20 @@ export function coolFactor() {
     }
     return countMap;
 }
+
+
+export function customerGender() {
+    const countMap = {};
+
+    for (let customer of customers) {
+        const gender = customer.gender;
+
+        if (countMap[gender]) {
+            countMap[gender]++;
+
+        } else {
+            countMap[gender] = 1;
+        }
+    }
+    return countMap;
+}
