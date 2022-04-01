@@ -3,7 +3,7 @@
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('bar chart should display # of customers by purchase frequency', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = true;
