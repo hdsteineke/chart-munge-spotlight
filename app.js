@@ -55,7 +55,6 @@ const data2 = {
         data: values2,
     }]
 };
-console.log(labels2, values2);
 
 const config2 = {
     type: 'line',
@@ -88,6 +87,7 @@ const data3 = {
         data: values3,
     }]
 };
+console.log(labels3, values3);
 
 const config3 = {
     type: 'pie',

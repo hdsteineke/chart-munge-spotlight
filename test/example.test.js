@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { purchaseFrequency, coolFactor } from '../data-utils.js';
+import { purchaseFrequency, coolFactor, customerGender } from '../data-utils.js';
 import { customers } from '../data.js';
 
 
@@ -48,6 +48,30 @@ test('line chart should display cool factor by # of customers', (expect) => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = coolFactor();
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
+
+
+test('line chart should display cool factor by # of customers', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = {
+        'Male': 448,
+        'Female': 457,
+        'Bigender': 14,
+        'Agender': 17,
+        'Non-binary': 24,
+        'Genderqueer': 11,
+        'Genderfluid': 18,
+        'Polygender': 11
+    };
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = customerGender();
 
     //Expect
     // Make assertions about what is expected versus the actual result
