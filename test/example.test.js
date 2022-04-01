@@ -1,6 +1,5 @@
 // IMPORT MODULES under test here:
 import { purchaseFrequency, coolFactor, customerGender } from '../data-utils.js';
-import { customers } from '../data.js';
 
 
 const test = QUnit.test;

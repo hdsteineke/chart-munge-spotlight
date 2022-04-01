@@ -87,7 +87,6 @@ const data3 = {
         data: values3,
     }]
 };
-console.log(labels3, values3);
 
 const config3 = {
     type: 'pie',
