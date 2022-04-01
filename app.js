@@ -21,7 +21,8 @@ const data = {
         data: values,
     }]
 };
-
+console.log(labels, values);
+  
 const config = {
     type: 'bar',
     data: data,
