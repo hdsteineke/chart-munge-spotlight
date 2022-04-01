@@ -1,11 +1,11 @@
 // IMPORT MODULES under test here:
-import { purchaseFrequency } from '../data-utils.js';
+import { purchaseFrequency, coolFactor } from '../data-utils.js';
 import { customers } from '../data.js';
 
 
 const test = QUnit.test;
 
-test('bar chart should display # of customers by purchase frequency', (expect) => {
+test('bar chart should display purchase frequency by # of customers', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = {
@@ -22,6 +22,32 @@ test('bar chart should display # of customers by purchase frequency', (expect) =
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = purchaseFrequency();
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
+
+
+test('line chart should display cool factor by # of customers', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = {
+        1: 109,
+        2: 119,
+        3: 99,
+        4: 101,
+        5: 93,
+        6: 102,
+        7: 101,
+        8: 99,
+        9: 82,
+        10: 95
+    };
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = coolFactor();
 
     //Expect
     // Make assertions about what is expected versus the actual result
